@@ -4,6 +4,11 @@ import sys
 import time
 import os
 
+# Simple script for downloading all the tweets in the list,
+# Get your bearer token from the twitter dev dashborad: https://developer.twitter.com/ (Make an account if you dont have one)
+# and replace Bearer token with it. You can change the file it reads from by running it with an argument, or replacing the list1.txt with your file
+
+
 # Alan - list 1
 # Samuel - list 2
 # Ansh - list 3
