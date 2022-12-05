@@ -23,7 +23,6 @@ from config import BEARER_TOKEN, LIST_FILE
 
 RATE_LIMIT = 16 * 60 
 MAX_REQ = 850
- 
 
 queue = []
 
@@ -75,7 +74,7 @@ if __name__ == '__main__':
             data = json.load(f)
     
 
-    with open(args[1], 'r') as f:
+    with open(LIST_FILE, 'r') as f:
         tweets = f.read().split('\n')[:-1]
     
     allTweets = len(tweets)
@@ -84,7 +83,6 @@ if __name__ == '__main__':
         tweets = tweets[1:]
     
     downloaded = allTweets - len(tweets)
-
 
     for id in tweets:
 
