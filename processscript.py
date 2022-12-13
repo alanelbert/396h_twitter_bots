@@ -27,6 +27,12 @@ if __name__ == '__main__':
                 text += [ele['text']]
                 labels += [botidents[id]]
         
+    pd.DataFrame(
+        {
+        "labels": labels,
+        "text": text
+        }
+    ).to_csv('data/processed2.csv', columns=['labels', 'text'], index=False)
 
-    pd.DataFrame(data=np.array([labels, text]).transpose(), columns=['labels', 'texts']).to_csv('data/processed.csv', index=False)
+    #pd.DataFrame(data=np.array([labels, text]).transpose()).to_csv('data/processed.csv', columns=['labels', 'texts'])
     
